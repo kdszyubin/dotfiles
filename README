@@ -1,0 +1,1 @@
+直接在dotfiles目录下运行boostrap.sh文件，将dotfiles目录下的dot文件软链接到$HOME目录下
