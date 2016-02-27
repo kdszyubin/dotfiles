@@ -85,3 +85,4 @@ set incsearch				" 输入字符串就显示匹配点
 set listchars=eol:¬,nbsp:¶,tab:>\ ,extends:»,precedes:«,trail:•
 "set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
 set list
+set hlsearch
