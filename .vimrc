@@ -60,6 +60,8 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_auto_loc_list=1					" 显示错误信息窗口
+let g:syntastic_check_on_wq = 0
+"let g:syntastic_disabled_filetypes=['c']
 
 " vim
 set encoding=utf8			" 解析文件方式
