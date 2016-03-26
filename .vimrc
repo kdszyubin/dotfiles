@@ -56,12 +56,14 @@ nmap <F3> :NERDTreeToggle  <CR>
 nmap <F8> :TagbarToggle  <CR>
 
 " syntastic
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 1				" 打开时检查
+let g:syntastic_check_on_wq = 0					" 关闭时检查
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_auto_loc_list=1					" 显示错误信息窗口
-let g:syntastic_check_on_wq = 0
-"let g:syntastic_disabled_filetypes=['c']
+"let g:syntastic_disabled_filetypes=['tex']
+"nmap <F9> :SyntasticToggle  <CR>
+let g:syntastic_mode_map = { 'passive_filetypes': ['tex',] } " 不检测tex文件语法
 
 " vim
 set encoding=utf8			" 解析文件方式
