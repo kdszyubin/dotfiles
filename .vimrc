@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
+"Plugin 'nathanaelkane/vim-indent-guides'  "对齐线
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -62,8 +63,14 @@ let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_auto_loc_list=1					" 显示错误信息窗口
 "let g:syntastic_disabled_filetypes=['tex']
-"nmap <F9> :SyntasticToggle  <CR>
+nmap <F9> :SyntasticToggle  <CR>
 let g:syntastic_mode_map = { 'passive_filetypes': ['tex',] } " 不检测tex文件语法
+
+"vim-indent-guides
+"let g:indent_guides_auto_colors = 0
+"let g:indent_guides_guide_size = 1
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
 " vim
 set encoding=utf8			" 解析文件方式
