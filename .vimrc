@@ -14,6 +14,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-surround'
+Plugin 'mattn/emmet-vim'
+Plugin 'Valloric/YouCompleteMe'
 "Plugin 'nathanaelkane/vim-indent-guides'  "对齐线
 
 " The following are examples of different formats supported.
@@ -58,7 +60,7 @@ nmap <F8> :TagbarToggle  <CR>
 
 " syntastic
 let g:syntastic_check_on_open = 1				" 打开时检查
-let g:syntastic_check_on_wq = 0					" 关闭时检查
+let g:syntastic_check_on_wq = 1					" 关闭时检查
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
 let g:syntastic_auto_loc_list=1					" 显示错误信息窗口
@@ -72,9 +74,25 @@ let g:syntastic_mode_map = { 'passive_filetypes': ['tex',] } " 不检测tex文�
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
 "autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
+"emmetio/emmet
+"let g:user_emmet_mode='n'    "only enable normal mode functions.
+"let g:user_emmet_mode='inv'  "enable all functions, which is equal to
+"let g:user_emmet_mode='a'    "enable all function in all mode.
+"下面只对html/css启用
+"let g:user_emmet_install_global = 0
+"autocmd FileType html,css EmmetInstall
+
+
+"Valloric/YouCompleteMe
+let g:ycm_global_ycm_extra_conf='~/.vim/bundle/YouCompleteMe/third_party/ycmd/examples/.ycm_extra_conf.py'
+let mapleader = ","
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 " vim
+set fileformats=unix		" 默认fileformats=unix,dos
 set encoding=utf8			" 解析文件方式
-set fileencoding=utf8		" 文件编码方式
+set fileencodings=utf8,gb18030
+"set fileencoding=utf8		" 文件编码方式
 set termencoding=utf8		" 终端显示编码
 set t_Co=256
 set laststatus=2
@@ -93,7 +111,8 @@ set noshowmode				" 命令行不显示vim当前模式
 "--查找设置--
 set incsearch				" 输入字符串就显示匹配点
 "set incsearch				" 命令行显示vim当前模式
-set listchars=eol:¬,nbsp:¶,tab:>\ ,extends:»,precedes:«,trail:•
+set listchars=nbsp:¶,tab:>\ ,extends:»,precedes:«,trail:•
+"set listchars=eol:¬,nbsp:¶,tab:>\ ,extends:»,precedes:«,trail:•
 "set listchars=nbsp:¬,eol:¶,tab:>-,extends:»,precedes:«,trail:•
 set list
 set hlsearch
