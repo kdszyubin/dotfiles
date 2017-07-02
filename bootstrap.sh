@@ -52,4 +52,6 @@ done
 #  link_file "$HOME/.config/$DOTFILE" "$PWD/$DOTFILE"
 #done
 
+git submodule init
+git submodule update
 vim +PluginInstall +qall
