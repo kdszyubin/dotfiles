@@ -104,6 +104,7 @@ set cindent
 set shiftwidth=4
 set tabstop=4
 set softtabstop=4
+set expandtab
 set smartindent
 "--命令行设置--
 set showcmd					" 命令行显示输入的命令
